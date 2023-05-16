@@ -8,15 +8,15 @@
     },
     "authors": [
         {
-            "name": "Gaetan",
-            "email": "gaetan@hexadog.com"
+            "name": "Fábio Assunção",
+            "email": "fabio23gt@gmail.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
-        "prismalms/laravel-themes-installer": "*",
+        "prismalms/laravel-themes-installer": "^1.0",
         "illuminate/view": "^7.0|^8.0|^9.0|^10.0"
     },
     "require-dev": {
