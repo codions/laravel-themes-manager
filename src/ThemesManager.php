@@ -184,7 +184,7 @@ class ThemesManager
 
     /**
      * Find a theme by given name and vendor (optional)
-     * name can include vendor prefix (ie: hexadog/default)
+     * name can include vendor prefix (ie: prismalms/default)
      * If no vendor provided and name not prefixed by vendor
      * the first theme with given name is returned.
      */

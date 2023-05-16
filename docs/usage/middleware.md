@@ -20,7 +20,7 @@ class ThemeLoader extends HexadogThemeLoader
         // Check if request url starts with admin prefix
         if ($request-segment(1) === 'admin') {
             // Set a specific theme for matching urls
-            $theme = 'hexadog/admin';
+            $theme = 'prismalms/admin';
         }
 
         // Call parent Middleware handle method

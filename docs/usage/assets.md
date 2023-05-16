@@ -15,7 +15,7 @@ Ask the **Themes Manager** to generate an asset URL:
 
 This call will return the url of requested asset:
 ```
-http://localhost/themes/hexadog/default/css/app.min.css
+http://localhost/themes/prismalms/default/css/app.min.css
 ```
 
 ## Theme Style
@@ -29,7 +29,7 @@ Ask the **Themes Manager** to generate the stylesheet HTML tag:
 
 This call will generate the following code:
 ```html
-<link href="http://localhost/themes/hexadog/default/css/app.min.css">
+<link href="http://localhost/themes/prismalms/default/css/app.min.css">
 ```
 
 ## Theme Script
@@ -43,7 +43,7 @@ Ask the **Themes Manager** to generate the script HTML tag:
 
 This call will generate the following code:
 ```html
-<script src="http://localhost/themes/hexadog/default/js/app.min.js"></script>
+<script src="http://localhost/themes/prismalms/default/js/app.min.js"></script>
 ```
 
 ## Theme Image
@@ -56,7 +56,7 @@ Ask the **Themes Manager** to generate the image HTML tag:
 ```
 This call will generate the following code:
 ```html
-<img src="http://localhost/themes/hexadog/default/img/logo.png" alt="My Theme logo" />
+<img src="http://localhost/themes/prismalms/default/img/logo.png" alt="My Theme logo" />
 ```
 
 :::tip Customize public theme assets path

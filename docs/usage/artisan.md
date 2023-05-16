@@ -63,13 +63,13 @@ php artisan theme:list
 ## Activate Theme
 Only active themes can be used at runtime.
 ```shell
-php artisan theme:activate hexadog/default
+php artisan theme:activate prismalms/default
 ```
 
 ## Deactivate Theme
 Deactivated theme to make it unavailable for usage.
 ```shell
-php artisan theme:deactivate hexadog/default
+php artisan theme:deactivate prismalms/default
 ```
 
 ## Clear cache
