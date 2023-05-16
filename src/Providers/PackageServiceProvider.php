@@ -2,6 +2,10 @@
 
 namespace Prisma\ThemesManager\Providers;
 
+use Illuminate\Foundation\AliasLoader;
+use Illuminate\Routing\Router;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use Prisma\ThemesManager\Components\Image;
 use Prisma\ThemesManager\Components\PageTitle;
 use Prisma\ThemesManager\Components\Script;
@@ -11,10 +15,6 @@ use Prisma\ThemesManager\Console\Generators;
 use Prisma\ThemesManager\Facades\ThemesManager as ThemesManagerFacade;
 use Prisma\ThemesManager\Http\Middleware;
 use Prisma\ThemesManager\ThemesManager;
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 
 class PackageServiceProvider extends ServiceProvider
 {
@@ -77,7 +77,7 @@ class PackageServiceProvider extends ServiceProvider
     /**
      * Get Package absolute path.
      *
-     * @param  string  $path
+     * @param string $path
      */
     protected function getPath($path = '')
     {
@@ -90,7 +90,7 @@ class PackageServiceProvider extends ServiceProvider
     /**
      * Get Module normalized namespace.
      *
-     * @param  mixed  $prefix
+     * @param mixed $prefix
      */
     protected function getNormalizedNamespace($prefix = '')
     {

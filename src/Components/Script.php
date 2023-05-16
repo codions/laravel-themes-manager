@@ -2,8 +2,8 @@
 
 namespace Prisma\ThemesManager\Components;
 
-use Prisma\ThemesManager\Facades\ThemesManager;
 use Illuminate\View\Component;
+use Prisma\ThemesManager\Facades\ThemesManager;
 
 class Script extends Component
 {
@@ -19,7 +19,7 @@ class Script extends Component
      */
     public function __construct(string $src = null, bool $absolute = true)
     {
-        if (! is_null($src)) {
+        if (!is_null($src)) {
             $this->source = ThemesManager::asset($src, $absolute);
         } else {
             $this->source = null;

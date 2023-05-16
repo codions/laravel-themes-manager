@@ -2,11 +2,11 @@
 
 namespace Prisma\ThemesManager;
 
-use Prisma\ThemesManager\Exceptions\ThemeNotFoundException;
-use Prisma\ThemesManager\Traits\HasCache;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
+use Prisma\ThemesManager\Exceptions\ThemeNotFoundException;
+use Prisma\ThemesManager\Traits\HasCache;
 
 class ThemesManager
 {
@@ -44,7 +44,7 @@ class ThemesManager
      */
     public function has(string $name = null, ?Collection $themes = null): bool
     {
-        return ! is_null($this->findByName($name, null, $themes));
+        return !is_null($this->findByName($name, null, $themes));
     }
 
     /**
@@ -60,7 +60,7 @@ class ThemesManager
      */
     public function set(string $name): self
     {
-        if (! $this->has($name)) {
+        if (!$this->has($name)) {
             throw new ThemeNotFoundException($name);
         }
 
@@ -79,7 +79,8 @@ class ThemesManager
         return $this->themes
             ->filter(function ($theme) {
                 return $theme->enabled();
-            })->first();
+            })->first()
+        ;
     }
 
     /**
@@ -174,7 +175,7 @@ class ThemesManager
         }
 
         // If no Theme set, return /$asset
-        if (! $this->current()) {
+        if (!$this->current()) {
             return Str::start($asset, '/');
         }
 
@@ -210,7 +211,7 @@ class ThemesManager
     /**
      * Return attributes in html format.
      *
-     * @param  array  $attributes
+     * @param array $attributes
      */
     private function htmlAttributes($attributes): string
     {

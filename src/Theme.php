@@ -2,6 +2,12 @@
 
 namespace Prisma\ThemesManager;
 
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Str;
 use Prisma\ThemesManager\Events\ThemeDisabled;
 use Prisma\ThemesManager\Events\ThemeDisabling;
 use Prisma\ThemesManager\Events\ThemeEnabled;
@@ -9,12 +15,6 @@ use Prisma\ThemesManager\Events\ThemeEnabling;
 use Prisma\ThemesManager\Facades\ThemesManager;
 use Prisma\ThemesManager\Traits\HasTranslations;
 use Prisma\ThemesManager\Traits\HasViews;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 
 class Theme
 {
@@ -49,7 +49,7 @@ class Theme
     /**
      * The Parent theme.
      */
-    protected string | Theme | null $parent = null;
+    protected string|Theme|null $parent = null;
 
     /**
      * The theme statud (enabled or not).
@@ -192,13 +192,13 @@ class Theme
      */
     public function hasParent(): bool
     {
-        return ! is_null($this->parent);
+        return !is_null($this->parent);
     }
 
     /**
      * Set parent Theme.
      */
-    public function setParent(string | Theme | null $theme): self
+    public function setParent(string|Theme|null $theme): self
     {
         $this->parent = empty($theme) ? null : $theme;
 
@@ -208,7 +208,7 @@ class Theme
     /**
      * Get parent Theme.
      */
-    public function getParent(): self | null
+    public function getParent(): self|null
     {
         if (is_string($this->parent)) {
             $this->parent = ThemesManager::findByName($this->parent);
@@ -230,7 +230,7 @@ class Theme
      */
     public function disabled(): bool
     {
-        return ! $this->enabled();
+        return !$this->enabled();
     }
 
     /**
@@ -347,12 +347,12 @@ class Theme
             $publicThemeVendorPath = dirname($publicThemeAssetsPath);
 
             // Create target public theme vendor directory if required
-            if (! file_exists($publicThemeVendorPath)) {
+            if (!file_exists($publicThemeVendorPath)) {
                 app(Filesystem::class)->makeDirectory($publicThemeVendorPath, 0755, true);
             }
 
             // Create target symlink public theme assets directory if required
-            if (! file_exists($publicThemeAssetsPath) && file_exists($themeAssetsPath)) {
+            if (!file_exists($publicThemeAssetsPath) && file_exists($themeAssetsPath)) {
                 if (Config::get('themes-manager.symlink_relative', false)) {
                     app(Filesystem::class)->relativeLink($themeAssetsPath, rtrim($publicThemeAssetsPath, '/'));
                 } else {

@@ -59,7 +59,8 @@ class BladeServiceProvider extends ServiceProvider
     /**
      * Parse expression.
      *
-     * @param  string  $expression
+     * @param string $expression
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function parseMultipleArgs($expression)

@@ -2,8 +2,8 @@
 
 namespace Prisma\ThemesManager\Console\Commands;
 
-use Prisma\ThemesManager\Facades\ThemesManager;
 use Illuminate\Console\Command;
+use Prisma\ThemesManager\Facades\ThemesManager;
 
 class ListThemes extends Command
 {

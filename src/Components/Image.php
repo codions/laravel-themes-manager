@@ -2,8 +2,8 @@
 
 namespace Prisma\ThemesManager\Components;
 
-use Prisma\ThemesManager\Facades\ThemesManager;
 use Illuminate\View\Component;
+use Prisma\ThemesManager\Facades\ThemesManager;
 
 class Image extends Component
 {
