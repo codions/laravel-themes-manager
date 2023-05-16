@@ -7,6 +7,8 @@ use Codions\ThemesManager\Events\ThemeDisabling;
 use Codions\ThemesManager\Events\ThemeEnabled;
 use Codions\ThemesManager\Events\ThemeEnabling;
 use Codions\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Traits\HasConfigs;
+use Codions\ThemesManager\Traits\HasHelpers;
 use Codions\ThemesManager\Traits\HasTranslations;
 use Codions\ThemesManager\Traits\HasViews;
 use Illuminate\Filesystem\Filesystem;
@@ -20,6 +22,8 @@ class Theme
 {
     use HasTranslations;
     use HasViews;
+    use HasHelpers;
+    use HasConfigs;
 
     /**
      * The theme name.
@@ -49,7 +53,7 @@ class Theme
     /**
      * The Parent theme.
      */
-    protected string|Theme|null $parent = null;
+    protected string | Theme | null $parent = null;
 
     /**
      * The theme statud (enabled or not).
@@ -60,6 +64,11 @@ class Theme
      * Theme extra data.
      */
     protected array $extra = [];
+
+    /**
+     * * Theme configs.
+     */
+    protected array $config = [];
 
     /**
      * The constructor.
@@ -192,13 +201,13 @@ class Theme
      */
     public function hasParent(): bool
     {
-        return !is_null($this->parent);
+        return ! is_null($this->parent);
     }
 
     /**
      * Set parent Theme.
      */
-    public function setParent(string|Theme|null $theme): self
+    public function setParent(string | Theme | null $theme): self
     {
         $this->parent = empty($theme) ? null : $theme;
 
@@ -208,7 +217,7 @@ class Theme
     /**
      * Get parent Theme.
      */
-    public function getParent(): self|null
+    public function getParent(): self | null
     {
         if (is_string($this->parent)) {
             $this->parent = ThemesManager::findByName($this->parent);
@@ -230,7 +239,7 @@ class Theme
      */
     public function disabled(): bool
     {
-        return !$this->enabled();
+        return ! $this->enabled();
     }
 
     /**
@@ -268,6 +277,11 @@ class Theme
             $this->enabled = true;
             $this->loadViews();
             $this->loadTranlastions();
+            $this->loadHelpers();
+
+            if (function_exists('theme_load')) {
+                theme_load();
+            }
 
             if ($withEvent) {
                 event(new ThemeEnabled($this->name));
@@ -347,12 +361,12 @@ class Theme
             $publicThemeVendorPath = dirname($publicThemeAssetsPath);
 
             // Create target public theme vendor directory if required
-            if (!file_exists($publicThemeVendorPath)) {
+            if (! file_exists($publicThemeVendorPath)) {
                 app(Filesystem::class)->makeDirectory($publicThemeVendorPath, 0755, true);
             }
 
             // Create target symlink public theme assets directory if required
-            if (!file_exists($publicThemeAssetsPath) && file_exists($themeAssetsPath)) {
+            if (! file_exists($publicThemeAssetsPath) && file_exists($themeAssetsPath)) {
                 if (Config::get('themes-manager.symlink_relative', false)) {
                     app(Filesystem::class)->relativeLink($themeAssetsPath, rtrim($publicThemeAssetsPath, '/'));
                 } else {
