@@ -1,0 +1,61 @@
+{
+    "name": "prismalms/laravel-themes-manager",
+    "description": "Bring multi themes support to your Laravel application with a full-featured Themes Manager",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/prismalms/laravel-themes-manager/issues",
+        "source": "https://github.com/prismalms/laravel-themes-manager"
+    },
+    "authors": [
+        {
+            "name": "Gaetan",
+            "email": "gaetan@hexadog.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "prismalms/laravel-themes-installer": "*",
+        "illuminate/view": "^7.0|^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "phpunit/phpunit": "^7.0|^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prisma\\ThemesManager\\": "src"
+        },
+        "files": [
+            "helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Prisma\\ThemesManager\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "prismalms/laravel-themes-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Prisma\\ThemesManager\\Providers\\PackageServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "Prisma\\ThemesManager\\Facades\\ThemesManager"
+            },
+            "dont-discover": []
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:windows": "vendor\\bin\\phpunit",
+        "check-style": "vendor/bin/phpcs --extensions=php ./src",
+        "fix-style": "vendor/bin/php-cs-fixer fix"
+    }
+}
