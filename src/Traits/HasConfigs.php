@@ -8,7 +8,8 @@ trait HasConfigs
 {
     /**
      * @param null|string $key
-     * @param null|mixed $default
+     * @param null|mixed  $default
+     *
      * @return array|mixed
      */
     public function config($key = null, $default = null)
