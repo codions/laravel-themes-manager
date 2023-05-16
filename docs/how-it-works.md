@@ -41,15 +41,15 @@ Best way to create a new Theme is to use `theme:make` artisan command. See [here
 Note that `composer.json` file is **required** and must contains following data (here is an example for a theme named __maestro__):
 ```json
 {
-    "name": "prismalms/maestro",
-    "description": "Hexadog default theme",
+    "name": "codions/astra",
+    "description": "Codions default theme",
     "type": "laravel-theme",
     "version": "1.0",
     "minimum-stability": "stable",
     "authors": [
         {
-            "name": "Gaetan",
-            "email": "gaetan@hexadog.com"
+            "name": "Fábio Assunção",
+            "email": "fabio23gt@gmail.com"
         }
     ],
     "extra": {

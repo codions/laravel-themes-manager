@@ -18,7 +18,7 @@ class MyController extends Controller
 
         // Specify theme name with vendor
         // in case multiple themes with same name are provided by multiple vendor
-        ThemesManager::set('prismalms/my-theme');
+        ThemesManager::set('codions/my-theme');
     }
 }
 ```

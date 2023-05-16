@@ -11,16 +11,16 @@ Here is an example of middleware which set a theme based on the request url. It 
 namespace App\Http\Middleware;
 
 use Closure;
-use Codions\ThemesManager\Http\Middleware\ThemeLoader as HexadogThemeLoader;
+use Codions\ThemesManager\Http\Middleware\ThemeLoader as CodionsThemeLoader;
 
-class ThemeLoader extends HexadogThemeLoader
+class ThemeLoader extends CodionsThemeLoader
 {
     public function handle($request, Closure $next, $theme = null)
     {
         // Check if request url starts with admin prefix
         if ($request-segment(1) === 'admin') {
             // Set a specific theme for matching urls
-            $theme = 'prismalms/admin';
+            $theme = 'codions/admin';
         }
 
         // Call parent Middleware handle method

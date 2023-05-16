@@ -17,26 +17,26 @@ Clean up you theme layouts with our integrated Blade Components.
 
 ## Theme Asset
 ```html
-<x-theme-asset source="css/app.css"/> <!-- http://laravel.test/themes/prismalms/default/css/app.css -->
+<x-theme-asset source="css/app.css"/> <!-- http://laravel.test/themes/codions/default/css/app.css -->
 ```
 
 ## Theme Image
 ```html
-<x-theme-image source="img/logo.png"/> <!-- <img src="http://laravel.test/themes/prismalms/default/img/logo.png" /> -->
+<x-theme-image source="img/logo.png"/> <!-- <img src="http://laravel.test/themes/codions/default/img/logo.png" /> -->
 
 <!-- Add any HTML attribute -->
-<x-theme-image source="img/logo.png" class="image" alt="Logo" /> <!-- <img src="themes/prismalms/default/img/logo.png" class="image" alt="logo" /> -->
+<x-theme-image source="img/logo.png" class="image" alt="Logo" /> <!-- <img src="themes/codions/default/img/logo.png" class="image" alt="logo" /> -->
 ```
 
 ## Theme Script
 ```html
-<x-theme-script source="css/app.css"/> <!-- http://laravel.test/themes/prismalms/default/css/app.css -->
+<x-theme-script source="css/app.css"/> <!-- http://laravel.test/themes/codions/default/css/app.css -->
 ```
 
 ## Theme Style
 ```html
-<x-theme-style source="css/app.css"/> <!-- <link src="http://laravel.test/themes/prismalms/default/css/app.css" rel="stylehseet"> -->
+<x-theme-style source="css/app.css"/> <!-- <link src="http://laravel.test/themes/codions/default/css/app.css" rel="stylehseet"> -->
 
 <!-- Media -->
-<x-theme-style source="css/app.css" media="print"/> <!-- <link src="themes/prismalms/default/css/app.css" rel="stylehseet" media="print"> -->
+<x-theme-style source="css/app.css" media="print"/> <!-- <link src="themes/codions/default/css/app.css" rel="stylehseet" media="print"> -->
 ```
