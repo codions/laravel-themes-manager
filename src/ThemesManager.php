@@ -1,12 +1,12 @@
 <?php
 
-namespace Prisma\ThemesManager;
+namespace Codions\ThemesManager;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
-use Prisma\ThemesManager\Exceptions\ThemeNotFoundException;
-use Prisma\ThemesManager\Traits\HasCache;
+use Codions\ThemesManager\Exceptions\ThemeNotFoundException;
+use Codions\ThemesManager\Traits\HasCache;
 
 class ThemesManager
 {

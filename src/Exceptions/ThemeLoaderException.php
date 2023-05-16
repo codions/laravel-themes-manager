@@ -1,11 +1,11 @@
 <?php
 
-namespace Prisma\ThemesManager\Exceptions;
+namespace Codions\ThemesManager\Exceptions;
 
 class ThemeLoaderException extends \RuntimeException
 {
     /**
-     * @return \Prisma\ThemesManager\Exceptions\ThemeLoaderException
+     * @return \Codions\ThemesManager\Exceptions\ThemeLoaderException
      */
     public static function duplicate(string $name): self
     {

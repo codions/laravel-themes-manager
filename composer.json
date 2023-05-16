@@ -1,10 +1,10 @@
 {
-    "name": "prismalms/laravel-themes-manager",
+    "name": "codions/laravel-themes-manager",
     "description": "Bring multi themes support to your Laravel application with a full-featured Themes Manager",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/prismalms/laravel-themes-manager/issues",
-        "source": "https://github.com/prismalms/laravel-themes-manager"
+        "issues": "https://github.com/codions/laravel-themes-manager/issues",
+        "source": "https://github.com/codions/laravel-themes-manager"
     },
     "authors": [
         {
@@ -16,7 +16,7 @@
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
-        "prismalms/laravel-themes-installer": "^1.0",
+        "codions/laravel-themes-installer": "^1.0",
         "illuminate/view": "^7.0|^8.0|^9.0|^10.0"
     },
     "require-dev": {
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Prisma\\ThemesManager\\": "src"
+            "Codions\\ThemesManager\\": "src"
         },
         "files": [
             "helpers/helpers.php"
@@ -33,21 +33,21 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Prisma\\ThemesManager\\Test\\": "tests"
+            "Codions\\ThemesManager\\Test\\": "tests"
         }
     },
     "config": {
         "allow-plugins": {
-            "prismalms/laravel-themes-installer": true
+            "codions/laravel-themes-installer": true
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Prisma\\ThemesManager\\Providers\\PackageServiceProvider"
+                "Codions\\ThemesManager\\Providers\\PackageServiceProvider"
             ],
             "aliases": {
-                "Theme": "Prisma\\ThemesManager\\Facades\\ThemesManager"
+                "Theme": "Codions\\ThemesManager\\Facades\\ThemesManager"
             },
             "dont-discover": []
         }

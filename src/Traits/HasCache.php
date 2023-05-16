@@ -1,11 +1,11 @@
 <?php
 
-namespace Prisma\ThemesManager\Traits;
+namespace Codions\ThemesManager\Traits;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
-use Prisma\ThemesManager\ThemeFinder;
+use Codions\ThemesManager\ThemeFinder;
 
 trait HasCache
 {

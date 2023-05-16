@@ -1,10 +1,10 @@
 <?php
 
-namespace Prisma\ThemesManager\Console\Commands;
+namespace Codions\ThemesManager\Console\Commands;
 
 use Illuminate\Console\Command;
-use Prisma\ThemesManager\Console\Commands\Traits\BlockMessage;
-use Prisma\ThemesManager\Console\Commands\Traits\SectionMessage;
+use Codions\ThemesManager\Console\Commands\Traits\BlockMessage;
+use Codions\ThemesManager\Console\Commands\Traits\SectionMessage;
 
 abstract class AbstractCommand extends Command
 {

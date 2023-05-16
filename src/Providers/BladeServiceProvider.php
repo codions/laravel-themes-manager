@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Providers;
+namespace Codions\ThemesManager\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;

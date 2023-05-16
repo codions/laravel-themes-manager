@@ -1,9 +1,9 @@
 <?php
 
-namespace Prisma\ThemesManager\Http\Middleware;
+namespace Codions\ThemesManager\Http\Middleware;
 
 use Illuminate\Http\Request;
-use Prisma\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Facades\ThemesManager;
 
 class ThemeLoader
 {

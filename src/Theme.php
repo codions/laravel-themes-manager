@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager;
+namespace Codions\ThemesManager;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Config;
@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
-use Prisma\ThemesManager\Events\ThemeDisabled;
-use Prisma\ThemesManager\Events\ThemeDisabling;
-use Prisma\ThemesManager\Events\ThemeEnabled;
-use Prisma\ThemesManager\Events\ThemeEnabling;
-use Prisma\ThemesManager\Facades\ThemesManager;
-use Prisma\ThemesManager\Traits\HasTranslations;
-use Prisma\ThemesManager\Traits\HasViews;
+use Codions\ThemesManager\Events\ThemeDisabled;
+use Codions\ThemesManager\Events\ThemeDisabling;
+use Codions\ThemesManager\Events\ThemeEnabled;
+use Codions\ThemesManager\Events\ThemeEnabling;
+use Codions\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Traits\HasTranslations;
+use Codions\ThemesManager\Traits\HasViews;
 
 class Theme
 {

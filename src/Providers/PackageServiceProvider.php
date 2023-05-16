@@ -1,20 +1,20 @@
 <?php
 
-namespace Prisma\ThemesManager\Providers;
+namespace Codions\ThemesManager\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
-use Prisma\ThemesManager\Components\Image;
-use Prisma\ThemesManager\Components\PageTitle;
-use Prisma\ThemesManager\Components\Script;
-use Prisma\ThemesManager\Components\Style;
-use Prisma\ThemesManager\Console\Commands;
-use Prisma\ThemesManager\Console\Generators;
-use Prisma\ThemesManager\Facades\ThemesManager as ThemesManagerFacade;
-use Prisma\ThemesManager\Http\Middleware;
-use Prisma\ThemesManager\ThemesManager;
+use Codions\ThemesManager\Components\Image;
+use Codions\ThemesManager\Components\PageTitle;
+use Codions\ThemesManager\Components\Script;
+use Codions\ThemesManager\Components\Style;
+use Codions\ThemesManager\Console\Commands;
+use Codions\ThemesManager\Console\Generators;
+use Codions\ThemesManager\Facades\ThemesManager as ThemesManagerFacade;
+use Codions\ThemesManager\Http\Middleware;
+use Codions\ThemesManager\ThemesManager;
 
 class PackageServiceProvider extends ServiceProvider
 {

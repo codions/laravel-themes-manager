@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Exceptions;
+namespace Codions\ThemesManager\Exceptions;
 
 class InvalidJsonException extends \Exception
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Prisma\ThemesManager\Console\Commands;
+namespace Codions\ThemesManager\Console\Commands;
 
 use Illuminate\Console\Command;
-use Prisma\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Facades\ThemesManager;
 
 class ListThemes extends Command
 {

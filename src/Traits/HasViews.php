@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Traits;
+namespace Codions\ThemesManager\Traits;
 
 use Illuminate\Mail\Markdown;
 use Illuminate\Support\Arr;

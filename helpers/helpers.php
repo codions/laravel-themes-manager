@@ -32,7 +32,7 @@ if (! function_exists('theme')) {
      * Set theme.
      *
      * @param  string  $themeName
-     * @return \Prisma\ThemesManager\Theme
+     * @return \Codions\ThemesManager\Theme
      */
     function theme($themeName = null)
     {

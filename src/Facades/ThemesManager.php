@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Facades;
+namespace Codions\ThemesManager\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

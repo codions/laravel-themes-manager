@@ -2,7 +2,7 @@
 You can automatize theme activation using provided middlewares.
 
 ## Web Middleware
-Create a new Middleware in <code>app/Http/Middleware</code> and configure your Laravel application to use it. This middleware must extends <code>Prisma\ThemesManager\Http\Middleware\ThemeLoader</code> middleware.
+Create a new Middleware in <code>app/Http/Middleware</code> and configure your Laravel application to use it. This middleware must extends <code>Codions\ThemesManager\Http\Middleware\ThemeLoader</code> middleware.
 
 Here is an example of middleware which set a theme based on the request url. It activated `admin` theme if current request url matches the `http(s)://mydomain/admin` pattern and use the fallback theme otherwise.
 ```php
@@ -11,7 +11,7 @@ Here is an example of middleware which set a theme based on the request url. It 
 namespace App\Http\Middleware;
 
 use Closure;
-use Prisma\ThemesManager\Http\Middleware\ThemeLoader as HexadogThemeLoader;
+use Codions\ThemesManager\Http\Middleware\ThemeLoader as HexadogThemeLoader;
 
 class ThemeLoader extends HexadogThemeLoader
 {
@@ -62,7 +62,7 @@ Edit App\Http\Kernel.php file to add the route middleware into the list of middl
 
 protected $routeMiddleware = [
     // ...
-    'theme' => \Prisma\ThemesManager\Http\Middleware\ThemeLoader::class,
+    'theme' => \Codions\ThemesManager\Http\Middleware\ThemeLoader::class,
 ];
 ```
 

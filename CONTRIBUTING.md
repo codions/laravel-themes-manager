@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are **welcome**. We accept contributions via Pull Requests on [Github](https://github.com/prismalms/laravel-themes-manager).
+Contributions are **welcome**. We accept contributions via Pull Requests on [Github](https://github.com/codions/laravel-themes-manager).
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 

@@ -10,7 +10,7 @@ Laravel Themes Manager requires PHP 7.3 and Laravel 7 or 8.
 ### Installing Themes Manager
 You can install Themes Manager through composer
 ```bash
-composer require prismalms/laravel-themes-manager
+composer require codions/laravel-themes-manager
 ```
 
 The package will automatically register its service provider.
@@ -23,7 +23,7 @@ After installing **Themes Manager**, there are a few things we need to do to pre
 First, we need to publish the configuration that comes with **Themes Manager**. You can do so by running the following artisan command:
 
 ```bash
-php artisan vendor:publish --provider="Prisma\ThemesManager\Providers\PackageServiceProvider" --tag=config
+php artisan vendor:publish --provider="Codions\ThemesManager\Providers\PackageServiceProvider" --tag=config
 ```
 
 This will create a `themes-manager.php` file in your application's `config` directory.
@@ -31,7 +31,7 @@ This will create a `themes-manager.php` file in your application's `config` dire
 ### Publishing the views
 
 ```bash
-php artisan vendor:publish --provider="Prisma\ThemesManager\Providers\PackageServiceProvider" --tag=views
+php artisan vendor:publish --provider="Codions\ThemesManager\Providers\PackageServiceProvider" --tag=views
 ```
 
 This will create a `vendor/themes-manager` directory in your application's `resources/views` directory with all views used by Themes manager.

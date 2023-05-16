@@ -98,16 +98,16 @@
             "time": "2022-10-20T09:10:12+00:00"
         },
         {
-            "name": "prismalms/laravel-themes-installer",
+            "name": "codions/laravel-themes-installer",
             "version": "v1.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/prismalms/laravel-themes-installer.git",
+                "url": "https://github.com/codions/laravel-themes-installer.git",
                 "reference": "362fa9e1e7414fc0440a7934bbcb4d3a4ba210ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prismalms/laravel-themes-installer/zipball/362fa9e1e7414fc0440a7934bbcb4d3a4ba210ac",
+                "url": "https://api.github.com/repos/codions/laravel-themes-installer/zipball/362fa9e1e7414fc0440a7934bbcb4d3a4ba210ac",
                 "reference": "362fa9e1e7414fc0440a7934bbcb4d3a4ba210ac",
                 "shasum": ""
             },
@@ -122,14 +122,14 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "Prisma\\LaravelThemeInstaller\\ThemeInstallerPlugin"
+                "class": "Codions\\LaravelThemeInstaller\\ThemeInstallerPlugin"
             },
             "autoload": {
                 "psr-0": {
-                    "Prisma\\LaravelThemeInstaller\\": "src/"
+                    "Codions\\LaravelThemeInstaller\\": "src/"
                 },
                 "psr-4": {
-                    "Prisma\\LaravelThemeInstaller\\": "src"
+                    "Codions\\LaravelThemeInstaller\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -143,8 +143,8 @@
                 }
             ],
             "support": {
-                "issues": "https://github.com/prismalms/laravel-themes-installer/issues",
-                "source": "https://github.com/prismalms/laravel-themes-installer"
+                "issues": "https://github.com/codions/laravel-themes-installer/issues",
+                "source": "https://github.com/codions/laravel-themes-installer"
             },
             "time": "2022-08-09T12:06:27+00:00"
         },

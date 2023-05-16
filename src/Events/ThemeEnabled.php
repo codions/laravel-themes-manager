@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Events;
+namespace Codions\ThemesManager\Events;
 
 class ThemeEnabled
 {

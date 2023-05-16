@@ -1,9 +1,9 @@
 <?php
 
-namespace Prisma\ThemesManager;
+namespace Codions\ThemesManager;
 
 use Illuminate\Support\Facades\Config;
-use Prisma\ThemesManager\Helpers\Json;
+use Codions\ThemesManager\Helpers\Json;
 use Symfony\Component\Finder\Finder;
 
 class ThemeFinder

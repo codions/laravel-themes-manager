@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Components;
+namespace Codions\ThemesManager\Components;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\View\Component;

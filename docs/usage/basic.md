@@ -8,7 +8,7 @@ Use the following method to set a theme manually at any time (in your controller
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Prisma\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Facades\ThemesManager;
 
 class MyController extends Controller
 {

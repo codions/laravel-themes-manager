@@ -1,10 +1,10 @@
 <?php
 
-namespace Prisma\ThemesManager\Helpers;
+namespace Codions\ThemesManager\Helpers;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
-use Prisma\ThemesManager\Exceptions\InvalidJsonException;
+use Codions\ThemesManager\Exceptions\InvalidJsonException;
 
 class Json
 {

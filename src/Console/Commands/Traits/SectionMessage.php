@@ -1,6 +1,6 @@
 <?php
 
-namespace Prisma\ThemesManager\Console\Commands\Traits;
+namespace Codions\ThemesManager\Console\Commands\Traits;
 
 trait SectionMessage
 {

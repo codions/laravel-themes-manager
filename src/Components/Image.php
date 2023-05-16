@@ -1,9 +1,9 @@
 <?php
 
-namespace Prisma\ThemesManager\Components;
+namespace Codions\ThemesManager\Components;
 
 use Illuminate\View\Component;
-use Prisma\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Facades\ThemesManager;
 
 class Image extends Component
 {
