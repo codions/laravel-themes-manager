@@ -24,7 +24,7 @@ class PackageServiceProvider extends ServiceProvider
     protected const PACKAGE_NAME = 'themes-manager';
 
     /**
-     * Pblishers list.
+     * Publishers list.
      */
     protected $publishers = [];
 
@@ -77,7 +77,7 @@ class PackageServiceProvider extends ServiceProvider
     /**
      * Get Package absolute path.
      *
-     * @param string $path
+     * @param  string  $path
      */
     protected function getPath($path = '')
     {
@@ -90,7 +90,7 @@ class PackageServiceProvider extends ServiceProvider
     /**
      * Get Module normalized namespace.
      *
-     * @param mixed $prefix
+     * @param  mixed  $prefix
      */
     protected function getNormalizedNamespace($prefix = '')
     {
@@ -112,7 +112,7 @@ class PackageServiceProvider extends ServiceProvider
 
     protected function strapCommands()
     {
-        if ($this->app->runningInConsole() || 'testing' == config('app.env')) {
+        if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\ClearCache::class,
                 Commands\ListThemes::class,
