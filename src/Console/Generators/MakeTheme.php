@@ -243,7 +243,7 @@ class MakeTheme extends Command
         }
         $this->files->makeDirectory($directory, 0755, true);
 
-        $source = __DIR__ . '/../../../resources/stubs/_folder-structure';
+        $source = __DIR__ . '/../../../resources/stubs/template';
 
         $this->files->copyDirectory($source, $directory, null);
 
