@@ -2,10 +2,6 @@
 
 namespace Codions\ThemesManager\Providers;
 
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 use Codions\ThemesManager\Components\Image;
 use Codions\ThemesManager\Components\PageTitle;
 use Codions\ThemesManager\Components\Script;
@@ -15,6 +11,10 @@ use Codions\ThemesManager\Console\Generators;
 use Codions\ThemesManager\Facades\ThemesManager as ThemesManagerFacade;
 use Codions\ThemesManager\Http\Middleware;
 use Codions\ThemesManager\ThemesManager;
+use Illuminate\Foundation\AliasLoader;
+use Illuminate\Routing\Router;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class PackageServiceProvider extends ServiceProvider
 {

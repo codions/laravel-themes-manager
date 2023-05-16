@@ -2,9 +2,9 @@
 
 namespace Codions\ThemesManager\Helpers;
 
+use Codions\ThemesManager\Exceptions\InvalidJsonException;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
-use Codions\ThemesManager\Exceptions\InvalidJsonException;
 
 class Json
 {

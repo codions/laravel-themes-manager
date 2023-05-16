@@ -2,8 +2,8 @@
 
 namespace Codions\ThemesManager\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Codions\ThemesManager\Facades\ThemesManager;
+use Illuminate\Http\Request;
 
 class ThemeLoader
 {

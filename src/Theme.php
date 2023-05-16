@@ -2,12 +2,6 @@
 
 namespace Codions\ThemesManager;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 use Codions\ThemesManager\Events\ThemeDisabled;
 use Codions\ThemesManager\Events\ThemeDisabling;
 use Codions\ThemesManager\Events\ThemeEnabled;
@@ -15,6 +9,12 @@ use Codions\ThemesManager\Events\ThemeEnabling;
 use Codions\ThemesManager\Facades\ThemesManager;
 use Codions\ThemesManager\Traits\HasTranslations;
 use Codions\ThemesManager\Traits\HasViews;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Str;
 
 class Theme
 {

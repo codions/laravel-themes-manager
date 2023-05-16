@@ -2,14 +2,14 @@
 
 namespace Codions\ThemesManager\Console\Generators;
 
+use Codions\ThemesManager\Console\Commands\Traits\BlockMessage;
+use Codions\ThemesManager\Console\Commands\Traits\SectionMessage;
+use Codions\ThemesManager\Facades\ThemesManager;
 use Illuminate\Config\Repository;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Codions\ThemesManager\Console\Commands\Traits\BlockMessage;
-use Codions\ThemesManager\Console\Commands\Traits\SectionMessage;
-use Codions\ThemesManager\Facades\ThemesManager;
 
 class MakeTheme extends Command
 {

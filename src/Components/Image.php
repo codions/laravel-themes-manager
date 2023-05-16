@@ -2,8 +2,8 @@
 
 namespace Codions\ThemesManager\Components;
 
-use Illuminate\View\Component;
 use Codions\ThemesManager\Facades\ThemesManager;
+use Illuminate\View\Component;
 
 class Image extends Component
 {

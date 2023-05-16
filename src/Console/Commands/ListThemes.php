@@ -2,8 +2,8 @@
 
 namespace Codions\ThemesManager\Console\Commands;
 
-use Illuminate\Console\Command;
 use Codions\ThemesManager\Facades\ThemesManager;
+use Illuminate\Console\Command;
 
 class ListThemes extends Command
 {

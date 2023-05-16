@@ -2,8 +2,8 @@
 
 namespace Codions\ThemesManager;
 
-use Illuminate\Support\Facades\Config;
 use Codions\ThemesManager\Helpers\Json;
+use Illuminate\Support\Facades\Config;
 use Symfony\Component\Finder\Finder;
 
 class ThemeFinder

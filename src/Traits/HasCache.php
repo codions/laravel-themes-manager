@@ -2,10 +2,10 @@
 
 namespace Codions\ThemesManager\Traits;
 
+use Codions\ThemesManager\ThemeFinder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
-use Codions\ThemesManager\ThemeFinder;
 
 trait HasCache
 {

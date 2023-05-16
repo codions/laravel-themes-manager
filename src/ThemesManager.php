@@ -2,11 +2,11 @@
 
 namespace Codions\ThemesManager;
 
+use Codions\ThemesManager\Exceptions\ThemeNotFoundException;
+use Codions\ThemesManager\Traits\HasCache;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
-use Codions\ThemesManager\Exceptions\ThemeNotFoundException;
-use Codions\ThemesManager\Traits\HasCache;
 
 class ThemesManager
 {

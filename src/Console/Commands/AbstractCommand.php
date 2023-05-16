@@ -2,9 +2,9 @@
 
 namespace Codions\ThemesManager\Console\Commands;
 
-use Illuminate\Console\Command;
 use Codions\ThemesManager\Console\Commands\Traits\BlockMessage;
 use Codions\ThemesManager\Console\Commands\Traits\SectionMessage;
+use Illuminate\Console\Command;
 
 abstract class AbstractCommand extends Command
 {
