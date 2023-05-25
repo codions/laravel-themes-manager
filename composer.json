@@ -20,7 +20,6 @@
         "illuminate/view": "^7.0|^8.0|^9.0|^10.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.14",
         "phpunit/phpunit": "^7.0|^8.0|^9.0|^10.0"
     },
     "autoload": {
@@ -51,11 +50,5 @@
             },
             "dont-discover": []
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test:windows": "vendor\\bin\\phpunit",
-        "check-style": "vendor/bin/phpcs --extensions=php ./src",
-        "fix-style": "vendor/bin/php-cs-fixer fix"
     }
 }
