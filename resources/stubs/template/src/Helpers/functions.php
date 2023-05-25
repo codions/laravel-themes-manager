@@ -10,18 +10,6 @@
 |
 */
 
-if (! function_exists('theme_load')) {
-
-    /**
-     * This function is called on theme loading. Put in all the rules that
-     * you want to be executedas a settings override or any other action.
-     */
-    function theme_load()
-    {
-        // Unleash your imagination here
-    }
-}
-
 if (! function_exists('theme_inspire')) {
 
     /**

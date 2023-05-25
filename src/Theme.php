@@ -279,10 +279,6 @@ class Theme
             $this->loadTranlastions();
             $this->loadHelpers();
 
-            if (function_exists('theme_load')) {
-                theme_load();
-            }
-
             if ($withEvent) {
                 event(new ThemeEnabled($this->name));
             }
