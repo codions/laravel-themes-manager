@@ -10,6 +10,7 @@ use Codions\ThemesManager\Facades\ThemesManager;
 use Codions\ThemesManager\Traits\Autoloader;
 use Codions\ThemesManager\Traits\HasConfigs;
 use Codions\ThemesManager\Traits\HasHelpers;
+use Codions\ThemesManager\Traits\HasProviders;
 use Codions\ThemesManager\Traits\HasTranslations;
 use Codions\ThemesManager\Traits\HasViews;
 use Illuminate\Filesystem\Filesystem;
@@ -21,11 +22,12 @@ use Illuminate\Support\Str;
 
 class Theme
 {
+    use Autoloader;
+    use HasProviders;
     use HasTranslations;
     use HasViews;
     use HasHelpers;
     use HasConfigs;
-    use Autoloader;
 
     /**
      * The theme name.
@@ -286,9 +288,11 @@ class Theme
 
             $this->enabled = true;
             $this->registerAutoloader();
+            $this->loadProviders();
             $this->loadViews();
             $this->loadTranlastions();
             $this->loadHelpers();
+            $this->registerLivewireComponents();
 
             if ($withEvent) {
                 event(new ThemeEnabled($this->name));

@@ -11,5 +11,10 @@
 */
 
 return [
-    'inspire' => 'Display an inspiring quote',
+    /*
+    * Theme Service Providers
+    */
+    'providers' => [
+        \Themes\DummyNamespace\Providers\ThemeServiceProvider::class,
+    ],
 ];

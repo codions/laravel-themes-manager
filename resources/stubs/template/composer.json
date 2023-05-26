@@ -15,5 +15,10 @@
             "parent": "DummyParent",
             "active": true
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Themes\\DummyNamespace\\": "src"
+        }
     }
 }

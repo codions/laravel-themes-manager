@@ -129,39 +129,6 @@ class MakeTheme extends Command
     }
 
     /**
-     * Replace placeholders in generated file.
-     *
-     * @param  \Symfony\Component\Finder\SplFileInfo  $file
-     * @return string
-     */
-    protected function replacePlaceholders($file)
-    {
-        $this->sectionMessage('File generation', "{$file->getPathName()}");
-
-        $find = [
-            'DummyAuthorName',
-            'DummyAuthorEmail',
-            'DummyDescription',
-            'DummyName',
-            'DummyParent',
-            'DummyVendor',
-            'DummyVersion',
-        ];
-
-        $replace = [
-            Str::title(Arr::get($this->theme, 'author-name', '')),
-            Arr::get($this->theme, 'author-email', ''),
-            Arr::get($this->theme, 'description', ''),
-            Arr::get($this->theme, 'name', ''),
-            Arr::get($this->theme, 'parent', ''),
-            Arr::get($this->theme, 'vendor', ''),
-            Arr::get($this->theme, 'version', '1.0'),
-        ];
-
-        return str_replace($find, $replace, $file->getContents());
-    }
-
-    /**
      * Ask for theme author information.
      * Notice: if value is set in themes-manager.composer.author.name and themes-manager.composer.author.email config value
      * then this value will be used.
@@ -218,7 +185,7 @@ class MakeTheme extends Command
      */
     protected function askVersion()
     {
-        $this->theme['version'] = $this->ask('Version number');
+        $this->theme['version'] = $this->ask('Version number', 'v1.0.0');
 
         if (! strlen($this->theme['version'])) {
             $this->theme['version'] = null;
@@ -256,5 +223,49 @@ class MakeTheme extends Command
 
             $this->files->put($filePath, $contents);
         }
+    }
+
+    /**
+     * Replace placeholders in generated file.
+     *
+     * @param  \Symfony\Component\Finder\SplFileInfo  $file
+     * @return string
+     */
+    protected function replacePlaceholders($file)
+    {
+        $this->sectionMessage('File generation', "{$file->getPathName()}");
+
+        $find = [
+            'DummyNamespace',
+            'DummyAuthorName',
+            'DummyAuthorEmail',
+            'DummyDescription',
+            'DummyName',
+            'DummyParent',
+            'DummyVendor',
+            'DummyVersion',
+        ];
+
+        $vendor = Arr::get($this->theme, 'vendor', '');
+        $name = Arr::get($this->theme, 'name', '');
+
+        $namespace = Str::studly($vendor) . '\\' . Str::studly($name);
+
+        if (Str::contains($file, 'composer.json')) {
+            $namespace = Str::studly($vendor) . '\\\\' . Str::studly($name);
+        }
+
+        $replace = [
+            $namespace,
+            Str::title(Arr::get($this->theme, 'author-name', '')),
+            Arr::get($this->theme, 'author-email', ''),
+            Arr::get($this->theme, 'description', ''),
+            $name,
+            Arr::get($this->theme, 'parent', ''),
+            $vendor,
+            Arr::get($this->theme, 'version', '1.0.0'),
+        ];
+
+        return str_replace($find, $replace, $file->getContents());
     }
 }
