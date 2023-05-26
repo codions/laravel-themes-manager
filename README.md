@@ -13,7 +13,7 @@
 </p>
 
 ## Introduction
-Laravel Themes Manager is a Laravel package which was created to let you developing multi-themes Laravel application.
+Enhance your Laravel application with versatile theme support using a comprehensive theme manager that offers a wide range of powerful features, including Livewire support and much more.
 
 ## Installation
 This package requires PHP 7.4 and Laravel 7.0 or higher.
