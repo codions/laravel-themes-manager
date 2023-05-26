@@ -7,6 +7,7 @@ use Codions\ThemesManager\Events\ThemeDisabling;
 use Codions\ThemesManager\Events\ThemeEnabled;
 use Codions\ThemesManager\Events\ThemeEnabling;
 use Codions\ThemesManager\Facades\ThemesManager;
+use Codions\ThemesManager\Traits\Autoloader;
 use Codions\ThemesManager\Traits\HasConfigs;
 use Codions\ThemesManager\Traits\HasHelpers;
 use Codions\ThemesManager\Traits\HasTranslations;
@@ -24,6 +25,7 @@ class Theme
     use HasViews;
     use HasHelpers;
     use HasConfigs;
+    use Autoloader;
 
     /**
      * The theme name.
@@ -196,6 +198,14 @@ class Theme
         return $this->vendor;
     }
 
+    public function getNamespace(string $path = null): string
+    {
+        $vendor = Str::studly($this->vendor);
+        $name = Str::studly($this->name);
+
+        return "Themes\\$vendor\\$name\\" . $path;
+    }
+
     /**
      * Check if has parent Theme.
      */
@@ -275,13 +285,10 @@ class Theme
             }
 
             $this->enabled = true;
+            $this->registerAutoloader();
             $this->loadViews();
             $this->loadTranlastions();
             $this->loadHelpers();
-
-            if (function_exists('theme_load')) {
-                theme_load();
-            }
 
             if ($withEvent) {
                 event(new ThemeEnabled($this->name));
