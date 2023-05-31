@@ -13,6 +13,7 @@ use Codions\ThemesManager\Traits\HasHelpers;
 use Codions\ThemesManager\Traits\HasProviders;
 use Codions\ThemesManager\Traits\HasTranslations;
 use Codions\ThemesManager\Traits\HasViews;
+use Exception;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
@@ -206,6 +207,21 @@ class Theme
         $name = Str::studly($this->name);
 
         return "Themes\\$vendor\\$name\\" . $path;
+    }
+
+    public function getInstance(string $path)
+    {
+        if (! $this->enabled()) {
+            $this->requireClass($path);
+        }
+
+        $class = $this->getNamespace($path);
+
+        if (! class_exists($class)) {
+            throw new Exception("Class not found: {$class}");
+        }
+
+        return new $class;
     }
 
     /**
