@@ -209,7 +209,7 @@ class Theme
         return "Themes\\$vendor\\$name\\" . $path;
     }
 
-    public function getInstance(string $path)
+    public function getInstance(string $path, ...$params)
     {
         if (! $this->enabled()) {
             $this->requireClass($path);
@@ -221,7 +221,7 @@ class Theme
             throw new Exception("Class not found: {$class}");
         }
 
-        return new $class;
+        return new $class(...$params);
     }
 
     /**
